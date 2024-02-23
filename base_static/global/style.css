@@ -1,4 +1,4 @@
-@import url(https://db.onlinewebfonts.com/c/bb2e1211dfd31103079dbce7c49e1d4e?family=DIN+Neuzeit+Grotesk+LT+W01+BdCn);
+@import url('https://db.onlinewebfonts.com/c/bb2e1211dfd31103079dbce7c49e1d4e?family=DIN+Neuzeit+Grotesk+LT+W01+BdCn');
 @import url('https://fonts.cdnfonts.com/css/amazon-ember');
 
 *{
@@ -11,6 +11,7 @@
 :root{
     --default-header-color: #007A7C;
     --default-header-text-color: white;
+    --default-font-family: 'Amazon Ember', sans-serif;
     --default-book-title-color: black;
 }
 
@@ -21,4 +22,8 @@ header{
 
 main div.card{
     color: var(--default-book-title-color);
+}
+
+h1, h2, h3, p, a, .title, .author, .price{
+    font-family: var(--default-font-family);
 }
