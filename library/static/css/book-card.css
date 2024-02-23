@@ -3,26 +3,39 @@ a{
 }
 
 .card{
+    align-items: center;
+    padding: 10px;
     background-color: white;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.311);
     height: fit-content;
-    width: 170px;
+    width: 200px;
+    margin-bottom: 20px;
 }
 
 .card:hover{
     cursor: pointer;
 }
 
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 40px;
+    margin-top: 10px;
+    
+}
+
 .img-book{
-    width: 170px;
+    width: 180px;
     height: 200px;
 }
 
 .title{
+    text-align: center;
     font-size: 0.9em;
 }
 
 .author{
+    text-align: center;
     font-size: 0.8em;
 }
 
@@ -31,3 +44,9 @@ a{
     width: 170px;
 }
 
+.book-info{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
