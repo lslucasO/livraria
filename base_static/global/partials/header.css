@@ -1,0 +1,36 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 90px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.082);
+}
+
+.links-container{
+    display: flex;
+    gap: 50px;
+    justify-content: right;
+}
+
+.link{
+    cursor: pointer;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.search-bar{
+    font-size: 1.2em;
+    width: 500px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.title-header{
+    color: white;
+}

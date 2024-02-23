@@ -1,0 +1,16 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --default-header-color: #007A7C;
+    --default-header-text-color: white;
+}
+
+header{
+    background-color: var(--default-header-color);
+    color: var(--default-header-text-color);
+}
