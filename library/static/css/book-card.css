@@ -12,10 +12,6 @@ a{
     margin-bottom: 20px;
 }
 
-.card:hover{
-    cursor: pointer;
-}
-
 .card-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -42,6 +38,23 @@ a{
 .price-btn{
     cursor: pointer;
     width: 170px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+    border: solid 1px rgba(0, 0, 0, 0.459);
+}
+
+.price-btn:hover{
+    background-color: #007A7C;
+    transition: 0.5s;
+    .price{
+        color: white;
+    }
+    
+}
+
+.price{
+    color: #007A7C;
 }
 
 .book-info{
