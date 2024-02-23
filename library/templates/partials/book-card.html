@@ -1,16 +1,17 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/book-card.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 <main>
     <div class="card-container">
         <div class="card">
-            <figure class="img-book">
-                <img src="" alt="" class="image">
+            <figure class="img-book-container">
+                <img class="img-book" src="{% static 'img/book-card-img.jpg' %}" >
             </figure>
             <section class="book-info">
-                <a href="title-link"><h2 class="title">Titulo</h2></a>
-                <p class="author"></p>
-                <button class="price-btn"><a href="price" class=""></a></button>
+                <a><h3 class="title">A Revolução dos Bichos</h3></a>
+                <p class="author">George Orwell</p>
+                <button class="price-btn"><a href="#" class="price">R$19,99</a></button>
             </section>
         </div>
     </div>

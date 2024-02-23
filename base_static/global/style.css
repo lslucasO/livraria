@@ -8,9 +8,14 @@
 :root{
     --default-header-color: #007A7C;
     --default-header-text-color: white;
+    --default-book-title-color: black;
 }
 
 header{
     background-color: var(--default-header-color);
     color: var(--default-header-text-color);
+}
+
+main div.card{
+    color: var(--default-book-title-color);
 }
