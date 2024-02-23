@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Book(models.Model):
     title = models.CharField(max_length=55)
     slug = models.SlugField(unique=True, default='')
@@ -12,3 +13,6 @@ class Book(models.Model):
     is_published = models.BooleanField(default=False)
     
     creator = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, default=None)
+
+    def __str__(self):
+        return self.title

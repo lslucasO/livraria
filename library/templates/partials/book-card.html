@@ -5,16 +5,18 @@
 <main>
     <h2>Livros feitos para você</h2>
     <div class="card-container">
+        {% for book in books %}
         <div class="card">
             <figure class="img-book-container">
-                <img class="img-book" src="{% static 'img/book-card-img.jpg' %}" >
+                <img class="img-book" src="{{ book.cover.url }}" >
             </figure>
             <section class="book-info">
-                <a><h3 class="title">A Revolução dos Bichos</h3></a>
-                <p class="author">George Orwell</p>
-                <button class="price-btn"><a href="#" class="price">R$19,99</a></button>
+                <a><h3 class="title">{{ book.title }}</h3></a>
+                <p class="author">{{ book.author }}</p>
+                <button class="price-btn"><a href="#" class="price">R${{ book.price }}</a></button>
             </section>
         </div>
+        {% endfor %}
     </div>
 
 </main>
