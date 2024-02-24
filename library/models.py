@@ -7,7 +7,7 @@ class Book(models.Model):
     slug = models.SlugField(unique=True, default='')
     author = models.CharField(max_length=55)
     price = models.FloatField()
-    cover = models.ImageField(upload_to='library/covers/%Y/%m/%d/', blank=True, default='')
+    cover = models.ImageField(upload_to='covers/', blank=True, default='')
     created_at = models.DateTimeField(auto_now_add=True)
     avaliable_until = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=False)
