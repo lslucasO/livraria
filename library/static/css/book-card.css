@@ -26,7 +26,7 @@ h2{
 
 .card-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(6, minmax(0px, 1fr));
     padding: 40px;
 }
 

@@ -3,7 +3,9 @@ from .models import *
 
 def home(request):
     
-    books = Book.objects.filter(is_published=True)
+    books = Book.objects.filter(
+        is_published=True
+        ).order_by('-id')
 
     context = {
         'title': 'Home',
