@@ -2,7 +2,11 @@ from django.contrib import admin
 from .models import *
 
 class BookAdmin(admin.ModelAdmin):
-    ...
+    # Adiciona slugs automatico
+    prepopulated_fields = {
+        'slug': ('title',)
+    }
+
     
 
 
@@ -60,8 +64,4 @@ admin.site.register(Book, BookAdmin)
 #     '-id'
 # ]
 
-# # Adiciona slugs automatico
-# prepopulated_fields = {
-#     'slug': ('title',)
-# }
 
