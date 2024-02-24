@@ -6,6 +6,10 @@ header{
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.082);
 }
 
+a{
+    text-decoration: none;
+}
+
 .links-container{
     display: flex;
     gap: 50px;

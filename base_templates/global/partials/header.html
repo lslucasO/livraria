@@ -6,7 +6,9 @@
     <figure class="logo-container">
         <img src="{% static 'global/img/book.png' %}" alt="" class="logo">
     </figure>
-    <h1 class="title-header">Livraria Virtual</h1>
+    <a href="{% url 'library:home' %}">
+        <h1 class="title-header">Livraria Virtual</h1>
+    </a>
     <input class="search-bar" type="text" value="" placeholder="O que você está procurando?" name="" id="">
     <nav class="links-container">
         <a href="" class="link">Minhas listas</a>

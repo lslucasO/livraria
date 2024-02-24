@@ -14,3 +14,8 @@ def home(request):
     
     return render(request, 'global/partials/home.html', context)
 
+
+def book_page(request, id):
+
+    
+    return render(request, 'library/pages/book-page.html')

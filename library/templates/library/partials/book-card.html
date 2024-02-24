@@ -8,7 +8,7 @@
         {% for book in books %}
         <div class="card">
             <figure class="img-book-container">
-                <img class="img-book" src="{{ book.cover.url }}" >
+                <a href="{% url 'library:book-page' book.id %}"><img class="img-book" src="{{ book.cover.url }}"></a>
             </figure>
             <section class="book-info">
                 <a><h3 class="title">{{ book.title }}</h3></a>
