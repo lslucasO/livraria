@@ -1,13 +1,38 @@
 main{
-    padding: 10px;
+    display: flex;
+    padding: 20px;
 }
 
 .book-view-container{
     display: flex;
+    gap: 30px;
     padding: 20px;
+    width: 1100px;
+    border-right: 1px solid rgba(128, 128, 128, 0.389);
 }
 
 .book-img{
     width: 320px;
     height: 450px;
+}
+
+.book-title{
+    font-size: 2em;
+}
+
+.book-synopsis-container{
+    margin-top: 20px;
+}
+
+.book-synopsis{
+   text-align: start;
+}
+
+.author-img{
+    border-radius: 50%;
+    width: 70px;
+}
+
+.author-info-container{
+    padding: 20px;
 }

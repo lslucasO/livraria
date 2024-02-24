@@ -10,19 +10,24 @@
         </figure>
         <section class="book-info">
             <h2 class="book-title">{{ book.title }}</h2>
-            <figure class="author-img-container">
-                <img src="{% static 'library/' %}" alt="" class="author-img">
-            </figure>
             <span class="book-genres">
                 <a href="#" class="genre">genre</a>
                 <a href="#" class="genre">genre</a>
                 <a href="#" class="genre">genre</a>
             </span>
+            <article class="book-synopsis-container">
+                <p class="book-synopsis">
+                    {{ book.synopsis }}
+                </p>
+            </article>
         </section>
-        <article class="book-sinopsy-container">
-            <p class="book-synopsis">
-                {{ book.synopsis }}
-            </p>
-        </article>
     </div>
+    <div class="author-info-container">
+        <figure class="author-img-container">
+            <img src="{% static 'library/img/woman.png' %}" alt="" class="author-img">
+        </figure>
+        <section class="author-info">  
+        </section>
+    </div>
+    
 </main>
