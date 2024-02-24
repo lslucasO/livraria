@@ -11,6 +11,7 @@ class Book(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     avaliable_until = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=False)
+    synopsis = models.TextField(max_length=1000, default='')
     
     creator = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, default=None)
 

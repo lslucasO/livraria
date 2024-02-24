@@ -17,5 +17,14 @@ def home(request):
 
 def book_page(request, id):
 
+    book = get_object_or_404(
+        Book,
+        pk=id,
+        is_published=True,
+    )
     
-    return render(request, 'library/pages/book-page.html')
+    context = {
+        'book': book,
+        'title': book.title,
+    }
+    return render(request, 'library/pages/book-page.html', context)
