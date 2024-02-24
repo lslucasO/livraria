@@ -14,7 +14,6 @@
                 <a><h3 class="title">{{ book.title }}</h3></a>
                 <p class="author">{{ book.author }}</p>
                 <button class="price-btn"><a href="#" class="price">R${{ book.price |floatformat:2 }}</a></button>
-                {{book.cover.url}}
             </section>
         </div>
         {% endfor %}
