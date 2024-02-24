@@ -27,4 +27,5 @@ def book_page(request, id):
         'book': book,
         'title': book.title,
     }
+    
     return render(request, 'library/pages/book-page.html', context)

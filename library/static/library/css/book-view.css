@@ -1,0 +1,13 @@
+main{
+    padding: 10px;
+}
+
+.book-view-container{
+    display: flex;
+    padding: 20px;
+}
+
+.book-img{
+    width: 320px;
+    height: 450px;
+}

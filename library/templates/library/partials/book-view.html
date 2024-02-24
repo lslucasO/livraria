@@ -1,17 +1,17 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/book-view.css' %}">
+<link rel="stylesheet" href="{% static 'library/css/book-view.css' %}">
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
 <main>
     <div class="book-view-container">
         <figure class="book-img-container">
-            <img src="#" alt="" class="book-img">
+            <img src="{{ book.cover.url }}" alt="" class="book-img">
         </figure>
         <section class="book-info">
-            <h2 class="book-title">Title</h2>
+            <h2 class="book-title">{{ book.title }}</h2>
             <figure class="author-img-container">
-                <img src="#" alt="" class="author-img">
+                <img src="{% static 'library/' %}" alt="" class="author-img">
             </figure>
             <span class="book-genres">
                 <a href="#" class="genre">genre</a>
@@ -20,8 +20,8 @@
             </span>
         </section>
         <article class="book-sinopsy-container">
-            <p class="book-sinopsy">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim fugiat dignissimos, velit voluptatum sapiente consequuntur beatae suscipit, debitis ad dolor ea minima quam magnam quis! Aspernatur autem perspiciatis nisi unde.
+            <p class="book-synopsis">
+                {{ book.synopsis }}
             </p>
         </article>
     </div>
