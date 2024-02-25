@@ -29,3 +29,11 @@ def book_page(request, id):
     }
     
     return render(request, 'library/pages/book-page.html', context)
+
+
+def create_account(request):
+    context = {
+        'title': 'Criar Conta'
+    }
+    
+    return render(request, 'library/pages/create-account-page.html', context)
