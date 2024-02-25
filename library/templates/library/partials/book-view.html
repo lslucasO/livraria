@@ -4,38 +4,50 @@
 
 
 <main>
-    <div class="book-view-container">
-        <figure class="book-img-container">
-            <img src="{{ book.cover.url }}" alt="" class="book-img">
-        </figure>
-        <section class="book-info">
-            <h2 class="book-title">{{ book.title }}</h2>
-            <span class="book-genres">
-                <a href="#" class="genre">genre</a>
-                <a href="#" class="genre">genre</a>
-                <a href="#" class="genre">genre</a>
-            </span>
-            <article class="book-synopsis-container">
-                <p class="book-synopsis">
-                    {{ book.synopsis }}
-                </p>
-            </article>
-            <span class="book-additionals">
-                <a href="#" class="additional">Teste</a>
-                <a href="#" class="additional">Teste</a>
-                <a href="#" class="additional">Teste</a>
-                <a href="#" class="additional">Teste</a>
-            </span>
-        </section>
-    </div>
-    <div class="author-info-container">
-        <h3 class="author-title">Autor(a) deste livro</h3>
-        <figure class="author-img-container">
-            <img src="{% static 'library/img/woman.png' %}" alt="" class="author-img">
-        </figure>
-        <section class="author-info">  
-            <p class="author-name">Luiza Almeida</p>
-        </section>
-    </div>
-    
+    <div class="global-book-view">
+        <div class="book-view-container">
+            <figure class="book-img-container">
+                <img src="{{ book.cover.url }}" alt="" class="book-img">
+            </figure>
+            <section class="book-info">
+                <h2 class="book-title">{{ book.title }}</h2>
+                <span class="book-genres">
+                    <a href="#" class="genre">genre</a>
+                    <a href="#" class="genre">genre</a>
+                    <a href="#" class="genre">genre</a>
+                </span>
+                <article class="book-synopsis-container">
+                    <p class="book-synopsis">
+                        {{ book.synopsis }}
+                    </p>
+                </article>
+                <span class="book-additionals">
+                    <a href="#" class="additional">Idioma</a>
+                    <a href="#" class="additional">Data da Publicação</a>
+                    <a href="#" class="additional">Número de Páginas</a>
+                    <a href="#" class="additional">Edição</a>
+                    <a href="#" class="additional">Capa</a>
+                </span>
+                <span class="book-additionals-data">
+                    <a href="#" class="additional">Português</a>
+                    <a href="#" class="additional">2021-03-04</a>
+                    <a href="#" class="additional">230</a>
+                    <a href="#" class="additional">1*</a>
+                    <a href="#" class="additional">Dura</a>
+                </span>
+            </section>
+        </div>
+        <div class="author-info-container">
+            <h3 class="author-title">Autor(a) deste livro</h3>
+            <figure class="author-img-container">
+                <img src="{% static 'library/img/woman.png' %}" alt="" class="author-img">
+            </figure>
+            <section class="author-info">
+                <p class="author-name">Luiza Almeida</p>
+            </section>
+            <a href="#" class="author-profile-link">Ver perfil</a>
+        </div>
+    </div> 
+    <div class="buy-book-container"></div>
+    <div class="comment-section-container"></div>
 </main>
