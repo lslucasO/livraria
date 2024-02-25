@@ -1,19 +1,25 @@
 main{
     display: flex;
-    padding: 20px;
+    padding: 30px;
 }
 
 .book-view-container{
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.152);
     display: flex;
     gap: 30px;
     padding: 20px;
     width: 1100px;
-    border-right: 1px solid rgba(128, 128, 128, 0.389);
+    border-radius: 5px;
 }
 
 .book-img{
     width: 320px;
     height: 450px;
+    transition: 0.5s;
+}
+
+.book-img:hover{
+    transform: scale(1.02);
 }
 
 .book-title{
@@ -28,11 +34,22 @@ main{
    text-align: start;
 }
 
+.book-additionals{
+    display: flex;
+}
+
 .author-img{
+    margin-top: 5px;
+    margin-bottom: 5px;
     border-radius: 50%;
     width: 70px;
 }
 
 .author-info-container{
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.185);
+    margin-left: 20px;
     padding: 20px;
+    border-radius: 5px;
 }
