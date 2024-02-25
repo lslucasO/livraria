@@ -11,7 +11,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('book-page/<int:id>', views.book_page, name='book-page'),
-    path('create-account/', views., name='create-account'),
+    path('create-account/', views.create_account, name='create-account'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
