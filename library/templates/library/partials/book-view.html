@@ -12,9 +12,7 @@
             <section class="book-info">
                 <h2 class="book-title">{{ book.title }}</h2>
                 <span class="book-genres">
-                    <a href="#" class="genre">genre</a>
-                    <a href="#" class="genre">genre</a>
-                    <a href="#" class="genre">genre</a>
+                    <a href="#" class="genre">{{ book.genre }}</a>
                 </span>
                 <article class="book-synopsis-container">
                     <p class="book-synopsis">
@@ -29,11 +27,11 @@
                     <a href="#" class="additional">Capa</a>
                 </span>
                 <span class="book-additionals-data">
-                    <a href="#" class="additional">Português</a>
-                    <a href="#" class="additional">2021-03-04</a>
-                    <a href="#" class="additional">230</a>
-                    <a href="#" class="additional">1*</a>
-                    <a href="#" class="additional">Dura</a>
+                    <a href="#" class="additional">{{ book.language }}</a>
+                    <a href="#" class="additional">{{ book.created_at }}</a>
+                    <a href="#" class="additional">{{ book.number_of_pages }}</a>
+                    <a href="#" class="additional">{{ book.edition }}*</a>
+                    <a href="#" class="additional">{{ book.cape }}</a>
                 </span>
             </section>
         </div>
