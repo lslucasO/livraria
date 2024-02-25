@@ -6,11 +6,23 @@ class BookAdmin(admin.ModelAdmin):
     prepopulated_fields = {
         'slug': ('title',)
     }
+    
+class GenreAdmin(admin.ModelAdmin):
+    # Adiciona slugs automatico
+    prepopulated_fields = {
+        'slug': ('name',)
+    }
 
+class LanguageAdmin(admin.ModelAdmin):
+    # Adiciona slugs automatico
+    prepopulated_fields = {
+        'slug': ('name',)
+    }
     
 
-
 admin.site.register(Book, BookAdmin)
+admin.site.register(Genre, GenreAdmin)
+admin.site.register(Language, LanguageAdmin)
 
 
 
