@@ -5,12 +5,11 @@ from project import settings
 from django.conf.urls.static import static
 from . import views
 
-app_name = 'library'
+app_name = 'users'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('book-page/<int:id>', views.book_page, name='book-page'),
+    path('create-account/', views.create_account_page, name='create-account'),
     
 ]
 
