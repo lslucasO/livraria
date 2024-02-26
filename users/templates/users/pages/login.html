@@ -1,0 +1,10 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+{% if messages %}
+    {% block messages %}
+        {% include 'global/partials/message.html' %}
+    {% endblock messages %}
+{% endif %}
+
+{% block content %}

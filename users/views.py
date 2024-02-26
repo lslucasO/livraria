@@ -12,7 +12,7 @@ def register_view(request):
     context = {
         'title': 'Criar Conta',
         'form': form,
-        'form_action': reverse(register_create)
+        'form_action': reverse('users:register-create'),
     }
     
     return render(request, 'users/pages/register.html', context)
@@ -31,7 +31,7 @@ def register_create(request):
         user = form.save(commit=False)
         user.set_password(user.password)
         user.save()
-        messages.success(request, 'Your user is created, please log in.')
+        messages.success(request, 'Seu usuário foi criado. Por favor, logue na sua conta.')
         
         del(request.session['register_form_data'])
         
