@@ -17,8 +17,7 @@ class RegisterForm(forms.ModelForm):
         
         help_texts = {
             'password': '''
-                Password must have at least one uppercase letter,
-                one lowercase letter and one number. The length should be at least 8 characters.
+                A senha deve conter pelo menos uma letra maiúscula, uma letra minúscula e um número. O comprimento deve ter pelo menos 8 caracteres.
             '''
         }
     ...
