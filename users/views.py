@@ -35,5 +35,5 @@ def register_create(request):
         
         del(request.session['register_form_data'])
         
-    return redirect(reverse('login'))
+    return redirect(reverse('users:login'))
 

@@ -9,7 +9,9 @@ app_name = 'users'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', views.register_view, name='register-view'),
+    path('register/', views.register_view, name='register'),
+    path('register-create/', views.register_create, name='register-create'),
+    path('login/', views.login, name='login')
     
 ]
 
