@@ -1,0 +1,8 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'global/message.css' %}">
+
+{% for message in messages %}
+    <div class="message-container">
+        <div class="message {{message.tags}}">{{message}}</div>
+    </div>
+{% endfor %}
