@@ -3,42 +3,41 @@
 <link rel="stylesheet" href="{% static 'users/css/form.css'%}">
 
 <main>
-    <h2 class="create-account-title">Crie sua Conta</h2>
     <div class="form-container">
-        <form action="{{form_action}}" method="POST">
-            {% csrf_token %}
-            <h2 class="title" >{{page_title}}</h2>
-    
-            <!-- Metodos importantes do Form -->
-            <div class="form-content">
-                {% for field in form %}
-                    <div class="form-group">
-                        <label for="{{field.id_for_label}}">{{field.label}}</label>
-                        <br>
-                        {{field}}
-                        {% if field.help_text %}
-                            <p class="help-text">{{field.help_text}}</p>
-                        {% endif %}
-                        {{field.errors}}
-                    </div>
-                {% endfor %}
-            </div>
-    
-            {% if form.errors %}
-                <div class="form-content-error">
-                    <div class="message message-error">
-                        Seu formulário possui erros, por favor corrija-os!
-                    </div>
+        <h2 class="create-account-title">Crie sua Conta</h2>
+        <div class="form-items">
+            <form action="{{form_action}}" method="POST">
+                {% csrf_token %}
+                <h2 class="title" >{{page_title}}</h2>
+                <!-- Metodos importantes do Form -->
+                <div class="form-content">
+                    {% for field in form %}
+                        <div class="form-group">
+                            <label for="{{field.id_for_label}}">{{field.label}}</label>
+                            <br>
+                            {{field}}
+                            {% if field.help_text %}
+                                <p class="help-text">{{field.help_text}}</p>
+                            {% endif %}
+                            {{field.errors}}
+                        </div>
+                    {% endfor %}
                 </div>
-            {% endif %}
-    
-            <div class="form-group">
-                <a href=""><button class="btn-send-form" type="submit">Enviar</button></a>
-            </div>
-        </form>
-        <figure class="img-register-container">
-            <img src="{% static 'global/img/phone.jpg' %}" alt="" class="img-register">
-        </figure>   
+                {% if form.errors %}
+                    <div class="form-content-error">
+                        <div class="message message-error">
+                            Seu formulário possui erros, por favor corrija-os!
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="form-group">
+                    <a href=""><button class="btn-send-form" type="submit">Enviar</button></a>
+                </div>
+            </form>
+            <figure class="img-register-container">
+                <img src="{% static 'global/img/phone.jpg' %}" alt="" class="img-register">
+            </figure>
+        </div>  
     </div>
     
 </main>
