@@ -38,7 +38,9 @@ def register_create(request):
     return redirect(reverse('users:login'))
 
 
-def login(request):
+def login_view(request):
+    
+    
     context = {
         'title': 'Logar'
     }
