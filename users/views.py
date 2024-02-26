@@ -37,3 +37,10 @@ def register_create(request):
         
     return redirect(reverse('users:login'))
 
+
+def login(request):
+    context = {
+        'title': 'Logar'
+    }
+    
+    return render(request, 'users/pages/login.html', context)
