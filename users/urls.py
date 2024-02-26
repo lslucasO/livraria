@@ -9,7 +9,7 @@ app_name = 'users'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('create-account/', views.create_account_page, name='create-account'),
+    path('register/', views.register_view, name='register-view'),
     
 ]
 

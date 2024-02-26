@@ -1,7 +1,7 @@
 from django.shortcuts import render
+from .forms import RegisterForm
 
-
-def create_account_page(request):
+def register_view(request):
     context = {
         'title': 'Criar Conta'
     }

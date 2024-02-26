@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'users/css/form.css'%}">
+
+<div class="form-container">
+    <form action="{{form_action}}" method="POST">
+        {% csrf_token %}
+        <h2 class="title" >{{page_title}}</h2>
+        <div class="form-content">
+            {% for field in form %}
+                <div class="form-group">
+                    <label for="{{field.id_for_label}}">{{field.label}}</label>
+                    {{field}}
+                    {% if field.help_text %}
+                        <p class="help-text">{{field.help_text}}</p>
+                    {% endif %}
+                    {{field.errors}}
+                </div>
+            {% endfor %}
+        </div>
+    
+        {% if form.errors %}
+            <div class="form-content-error">
+                <div class="message message-error">
+                    Seu formulário possui erros, por favor corrija-os!
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="form-group">
+            <a href=""><button type="submit">Send</button></a>
+        </div>
+    </form>
+</div>
