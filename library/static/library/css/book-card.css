@@ -53,6 +53,7 @@ h2{
 }
 
 .price-btn{
+    color: #007A7C;
     cursor: pointer;
     width: 170px;
     height: 30px;
@@ -64,15 +65,10 @@ h2{
 .price-btn:hover{
     background-color: #007A7C;
     transition: 0.5s;
-    .price{
-        color: white;
-    }
-    
+    color: white;
 }
 
-.price{
-    color: #007A7C;
-}
+
 
 .book-info{
     margin-top: 10px;

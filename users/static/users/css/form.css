@@ -34,3 +34,21 @@ main{
 .img-register{
     height: 350px;
 }
+
+.form-group{
+   
+    margin-top: 10px;
+}
+
+.btn-send-form{
+    border: 1px solid rgba(0, 0, 0, 0.536);
+    text-align: center;
+    width: 350px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn-send-form:hover{
+    cursor: pointer;
+}
