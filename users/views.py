@@ -2,7 +2,7 @@ from django.http import Http404
 from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.contrib import messages
-from .forms import RegisterForm
+from .forms import RegisterForm, LoginForm
 
 
 def register_view(request):
@@ -40,9 +40,16 @@ def register_create(request):
 
 def login_view(request):
     
+    form = LoginForm()
     
     context = {
-        'title': 'Logar'
+        'title': 'Logar',
+        'form_action': redirect('')
     }
     
     return render(request, 'users/pages/login.html', context)
+
+
+
+def profile_view(request):
+    return render(request, 'users/pages/profile.html')
