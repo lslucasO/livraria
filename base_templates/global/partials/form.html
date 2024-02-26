@@ -1,34 +1,44 @@
 {% load static %}
+
 <link rel="stylesheet" href="{% static 'users/css/form.css'%}">
 
-<div class="form-container">
-    <form action="{{form_action}}" method="POST">
-        {% csrf_token %}
-        <h2 class="title" >{{page_title}}</h2>
-        <!-- Metodos importantes do Form -->
-        <div class="form-content">
-            {% for field in form %}
-                <div class="form-group">
-                    <label for="{{field.id_for_label}}">{{field.label}}</label>
-                    {{field}}
-                    {% if field.help_text %}
-                        <p class="help-text">{{field.help_text}}</p>
-                    {% endif %}
-                    {{field.errors}}
-                </div>
-            {% endfor %}
-        </div>
+<main>
+    <h2 class="create-account-title">Crie sua Conta</h2>
+    <div class="form-container">
+        <form action="{{form_action}}" method="POST">
+            {% csrf_token %}
+            <h2 class="title" >{{page_title}}</h2>
     
-        {% if form.errors %}
-            <div class="form-content-error">
-                <div class="message message-error">
-                    Seu formulário possui erros, por favor corrija-os!
-                </div>
+            <!-- Metodos importantes do Form -->
+            <div class="form-content">
+                {% for field in form %}
+                    <div class="form-group">
+                        <label for="{{field.id_for_label}}">{{field.label}}</label>
+                        <br>
+                        {{field}}
+                        {% if field.help_text %}
+                            <p class="help-text">{{field.help_text}}</p>
+                        {% endif %}
+                        {{field.errors}}
+                    </div>
+                {% endfor %}
             </div>
-        {% endif %}
-
-        <div class="form-group">
-            <a href=""><button type="submit">Enviar</button></a>
-        </div>
-    </form>
-</div>
+    
+            {% if form.errors %}
+                <div class="form-content-error">
+                    <div class="message message-error">
+                        Seu formulário possui erros, por favor corrija-os!
+                    </div>
+                </div>
+            {% endif %}
+    
+            <div class="form-group">
+                <a href=""><button type="submit">Enviar</button></a>
+            </div>
+        </form>
+        <figure class="img-register-container">
+            <img src="{% static 'global/img/phone.jpg' %}" alt="" class="img-register">
+        </figure>   
+    </div>
+    
+</main>

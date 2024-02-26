@@ -1,0 +1,36 @@
+main{
+
+    padding: 20px;
+}
+
+.form-container{
+    align-items: center;
+    display: flex;
+    padding: 30px;
+    box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.205);
+    width: 850px;
+    height: fit-content;
+    margin: auto;
+    margin-top: 10px;
+    
+}
+
+.input-text{
+    border: 1px solid rgba(0, 0, 0, 0.536);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 350px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.create-account-title{
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+.img-register{
+    height: 350px;
+}
