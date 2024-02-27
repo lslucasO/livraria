@@ -52,5 +52,6 @@ def login_view(request):
 
 
 
+
 def profile_view(request):
     return render(request, 'users/pages/profile.html')
