@@ -3,6 +3,7 @@ from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm, LoginForm
 
 
@@ -46,7 +47,7 @@ def login_view(request):
     context = {
         'title': 'Logar',
         'form': form,
-        'form_action': redirect('users:profile')
+        'form_action': reverse('users:login-create')
     }
     
     return render(request, 'users/pages/login.html', context)
@@ -57,6 +58,7 @@ def login_create(request):
         raise Http404()
     
     form = LoginForm(request.POST)
+    login_url = reverse('users:login')
     
     # Autenticando o usuario no sistema pelo form de Login
     if form.is_valid():
@@ -76,7 +78,9 @@ def login_create(request):
     else:
         messages.error(request, 'Erro ao validar o formulário.')
     
+    return redirect(reverse('users:profile'))
 
 
-def profile_view(request):
+
+def profile(request):
     return render(request, 'users/pages/profile.html')
