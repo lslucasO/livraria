@@ -81,6 +81,24 @@ def login_create(request):
     return redirect(reverse('users:profile'))
 
 
+# Função de logout do usuario
+@login_required(login_url='login', redirect_field_name='next')
+def logout_view(request):
+    
+    if not request.POST:
+        return redirect(reverse('login'))
+    
+    if request.POST.get('username') != request.user.username:
+        return redirect(reverse('login'))    
+    
+    logout(request)
+    messages.success(request, 'Logged out succesfully')
+    return redirect(reverse('login'))
 
+
+
+@login_required(login_url='users:login', redirect_field_name='next')
 def profile(request):
     return render(request, 'users/pages/profile.html')
+
+
