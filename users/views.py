@@ -86,14 +86,14 @@ def login_create(request):
 def logout_view(request):
     
     if not request.POST:
-        return redirect(reverse('login'))
+        return redirect(reverse('users:login'))
     
     if request.POST.get('username') != request.user.username:
-        return redirect(reverse('login'))    
+        return redirect(reverse('users:login'))    
     
     logout(request)
-    messages.success(request, 'Logged out succesfully')
-    return redirect(reverse('login'))
+    messages.success(request, 'Você saiu da sua conta com sucesso.')
+    return redirect(reverse('users:login'))
 
 
 

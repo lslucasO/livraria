@@ -1,3 +1,10 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" href="{% static 'users/css/profile-view.css' %}">
+
+<main>
+    <div class="profile-view-container">
+        <h2>Você está logado como {{ request.user.username }}</h2>
+        <p>Clique <a href="{% url 'users:logout' %}">aqui</a> para sair</p>
+    </div>
+</main>
