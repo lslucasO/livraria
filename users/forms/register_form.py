@@ -37,6 +37,14 @@ class RegisterForm(forms.ModelForm):
                 A senha deve conter pelo menos uma letra maiúscula, uma letra minúscula e um número. O comprimento deve ter pelo menos 8 caracteres.
             '''
         }
+        
+        widgets = {
+            'first_name': forms.TextInput(attrs={
+            }),
+            'password': forms.PasswordInput(attrs={  
+            })
+
+        }
     
     def clean(self):
         # Validando os campos de senha, se são iguais.
