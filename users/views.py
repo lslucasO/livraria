@@ -61,18 +61,21 @@ def login_create(request):
     # Autenticando o usuario no sistema pelo form de Login
     if form.is_valid():
         authenticated_user = authenticate(
+            # Puxando nome e senha do usuario do banco de dados
             username=form.cleaned_data.get('username', ''),
             password=form.cleaned_data.get('password', ''),
         )
         
         if authenticated_user is not None:
-            messages.success(request, 'You are logged in.')
+            # Se o usuario for válido com o banco de dados
+            messages.success(request, 'Você logou na sua conta.')
+            # Inicia a sessão do usuario, metodo login
             login(request, authenticated_user)
         else:
-            messages.error(request, 'Invalid credentials, please try again.')
+            messages.error(request, 'Credenciais inválidas, tente novamente.')
     else:
-        messages.error(request, 'Error to validate form.')
-    ...
+        messages.error(request, 'Erro ao validar o formulário.')
+    
 
 
 def profile_view(request):
