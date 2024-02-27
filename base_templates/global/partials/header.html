@@ -11,7 +11,7 @@
     </a>
     <input class="search-bar" type="text" value="" placeholder="O que você está procurando?" name="" id="">
     <nav class="links-container">
-        <!-- É preciso checar se o Usuário possui uma conta no sistema -->
+    <!-- É preciso checar se o Usuário possui uma conta no sistema -->
         <a href="" class="link">Meu Carrinho</a>
         {% if request.user.is_authenticated %}
             <a href="{% url 'users:profile' %}" class="link">Minha Conta</a>

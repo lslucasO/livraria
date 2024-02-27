@@ -1,10 +1,12 @@
 {% load static %}
-
 <link rel="stylesheet" href="{% static 'users/css/form.css'%}">
 
 <main>
     <div class="form-container">
         <h2 class="create-account-title">{{ title }}</h2>
+        {% if request.path == '/users/register/' %}
+            <h3>Já possui uma conta? clique <a href="{% url 'users:login' %}">aqui</a> para logar.</h3>
+        {% endif %}
         <div class="form-items">
             <form action="{{form_action}}" method="POST">
                 {% csrf_token %}
@@ -33,7 +35,9 @@
                 <div class="form-group">
                     <a href=""><button class="btn-send-form" type="submit">Enviar</button></a>
                 </div>
+                
             </form>
+           
             <figure class="img-register-container">
                 <img src="{% static 'global/img/phone.jpg' %}" alt="" class="img-register">
             </figure>
