@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from utils.django_forms import *
 
 
-class LoginForm(forms.ModelForm):
+class LoginForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         add_placeholder(self.fields['username'], 'Digite seu nome de usuário')

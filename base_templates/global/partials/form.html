@@ -4,7 +4,7 @@
 
 <main>
     <div class="form-container">
-        <h2 class="create-account-title">Crie sua Conta</h2>
+        <h2 class="create-account-title">{{ title }}</h2>
         <div class="form-items">
             <form action="{{form_action}}" method="POST">
                 {% csrf_token %}

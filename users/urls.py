@@ -12,7 +12,7 @@ urlpatterns = [
     path('register/', views.register_view, name='register'),
     path('register-create/', views.register_create, name='register-create'),
     path('login/', views.login_view, name='login'),
-    path('profile/<int:id>', views.profile_view, name='profile'),
+    path('profile/', views.profile_view, name='profile'),
     
 ]
 

@@ -20,24 +20,6 @@ class RegisterForm(forms.ModelForm):
             'password',
         ]
         
-        widgets = {
-            'first_name': forms.TextInput(attrs={
-                'class': 'input-text',
-            }),
-            'last_name': forms.TextInput(attrs={
-                'class': 'input-text',
-            }),
-            'username': forms.TextInput(attrs={
-                'class': 'input-text',
-            }),'email': forms.TextInput(attrs={
-                'class': 'input-text',
-            }),
-            'password': forms.PasswordInput(attrs={
-                'class': 'input-text',
-            })
-        }
-        
-        
         help_texts = {
             'password': '''
                 A senha deve conter pelo menos uma letra maiúscula, uma letra minúscula e um número. O comprimento deve ter pelo menos 8 caracteres.
