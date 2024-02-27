@@ -2,6 +2,7 @@ from django.http import Http404
 from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 from .forms import RegisterForm, LoginForm
 
 
@@ -51,6 +52,27 @@ def login_view(request):
     return render(request, 'users/pages/login.html', context)
 
 
+def login_create(request):
+    if not request.POST:
+        raise Http404()
+    
+    form = LoginForm(request.POST)
+    
+    # Autenticando o usuario no sistema pelo form de Login
+    if form.is_valid():
+        authenticated_user = authenticate(
+            username=form.cleaned_data.get('username', ''),
+            password=form.cleaned_data.get('password', ''),
+        )
+        
+        if authenticated_user is not None:
+            messages.success(request, 'You are logged in.')
+            login(request, authenticated_user)
+        else:
+            messages.error(request, 'Invalid credentials, please try again.')
+    else:
+        messages.error(request, 'Error to validate form.')
+    ...
 
 
 def profile_view(request):
