@@ -11,16 +11,11 @@ class LoginForm(forms.ModelForm):
         add_placeholder(self.fields['password'], 'Digite sua senha')
     
     
-    class Meta:
-        # Modelo padrão de form do Django
-        model = User
-        fields = [
-            'first_name',
-            'last_name',
-            'username',
-            'email',
-            'password',
-        ]
+    username = forms.CharField()
+    password = forms.CharField(
+        widget=forms.PasswordInput()
+    )
+    
     
     def clean(self):
         ...

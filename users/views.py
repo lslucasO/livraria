@@ -44,7 +44,8 @@ def login_view(request):
     
     context = {
         'title': 'Logar',
-        'form_action': redirect('')
+        'form': form,
+        'form_action': redirect('users:profile')
     }
     
     return render(request, 'users/pages/login.html', context)
