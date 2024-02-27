@@ -3,13 +3,19 @@ main{
     padding: 20px;
 }
 
+
+.form-content{
+    display: grid;
+    grid-template-columns: 300px 300px;
+}
+
 .form-container{
     
     
     padding: 30px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.311);
-    width: 850px;
-    height: fit-content;
+    max-width: fit-content;
+    height: 600px;
     margin: auto;
     margin-top: 10px;
     border-radius: 5px;
@@ -23,9 +29,9 @@ main{
 
 input{
     border: 1px solid rgba(0, 0, 0, 0.536);
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
-    width: 350px;
+    width: 250px;
     height: 32px;
     padding: 10px;
     border-radius: 5px;
@@ -53,6 +59,7 @@ input{
     text-align: center;
     width: 350px;
     height: 35px;
+    margin-top: 40px;
     padding: 10px;
     border-radius: 5px;
     transition: 0.5s;

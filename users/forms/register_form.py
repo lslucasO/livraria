@@ -12,9 +12,15 @@ class RegisterForm(forms.ModelForm):
         add_placeholder(self.fields['first_name'], 'Ex: Lucas')
         add_placeholder(self.fields['last_name'], 'Ex: Santana')
         add_placeholder(self.fields['password'], 'Sua senha deve ser forte')
-        add_placeholder(self.fields['confirm_password'], 'Repita sua senha')
+        add_placeholder(self.fields['confirmar_senha'], 'Repita sua senha')
 
-    
+    confirmar_senha = forms.CharField(
+        required=True,
+        widget = forms.PasswordInput(attrs={
+        }),
+        validators=[strong_password]
+    )
+
     class Meta:
         # Modelo padrão de form do Django
         model = User
