@@ -8,5 +8,6 @@
 {% endif %}
 
 {% block content %} 
+    {% include 'global/partials/authenticate.html' %}
     {% include 'users/partials/profile-view.html' %}
 {% endblock content %}

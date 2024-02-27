@@ -84,7 +84,7 @@ def login_create(request):
 # Função de logout do usuario
 @login_required(login_url='login', redirect_field_name='next')
 def logout_view(request):
-    
+
     if not request.POST:
         return redirect(reverse('users:login'))
     
