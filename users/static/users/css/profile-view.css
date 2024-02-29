@@ -1,0 +1,18 @@
+main{
+    padding: 20px;
+}
+
+.profile-header-container{
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.279);
+    margin: auto;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+.img-banner-container{
+    max-width: 1000px;
+}
+
+.img-profile{
+    width: 100px;
+}
