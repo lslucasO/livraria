@@ -14,7 +14,7 @@
     <!-- É preciso checar se o Usuário possui uma conta no sistema -->
         <a href="" class="link">Meu Carrinho</a>
         {% if request.user.is_authenticated %}
-            <a href="{% url 'users:profile' %}" class="link">Minha Conta</a>
+            <a href="{% url 'users:profile' request.user.username %}" class="link">Minha Conta</a>
         {% else %}
             <a href="{% url 'users:register' %}" class="link">Minha Conta</a>
         {% endif %}

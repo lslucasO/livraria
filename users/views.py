@@ -58,6 +58,7 @@ def login_create(request):
         raise Http404()
     
     form = LoginForm(request.POST)
+    user_id = request.user.id
     login_url = reverse('users:login')
     
     # Autenticando o usuario no sistema pelo form de Login
@@ -78,7 +79,7 @@ def login_create(request):
     else:
         messages.error(request, 'Erro ao validar o formulário.')
     
-    return redirect(reverse('users:profile'))
+    return redirect(reverse(f'users:profile', args=(user_id)))
 
 
 # Função de logout do usuario
@@ -98,10 +99,10 @@ def logout_view(request):
 
 
 @login_required(login_url='users:login', redirect_field_name='next')
-def profile(request):
+def profile(request, username):
     
     context = {
-        'title': 'Seu Perfil'
+        'title': f'Perfil | {username}'
     }
     
     return render(request, 'users/pages/profile.html', context)

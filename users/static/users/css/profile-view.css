@@ -5,14 +5,40 @@ main{
 .profile-header-container{
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.279);
     margin: auto;
-    max-width: 1200px;
-    padding: 10px;
+    max-width: 1000px;
+    height: 1000px;
+}
+
+.profile-items-container{
+    padding: 20px;
 }
 
 .img-banner-container{
-    max-width: 1000px;
+    width: 1000px;
+    height: 200px;
+}
+
+.img-banner{
+    width: 1000px;
+    height: 200px;
 }
 
 .img-profile{
     width: 100px;
+}
+
+.btn{
+    color: #007A7C;
+    cursor: pointer;
+    width: 170px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+    border: solid 1px rgba(0, 0, 0, 0.459);
+}
+
+.btn:hover{
+    background-color: #007A7C;
+    transition: 0.5s;
+    color: white;
 }

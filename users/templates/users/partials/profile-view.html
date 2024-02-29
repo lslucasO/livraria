@@ -5,21 +5,23 @@
 <main>
     <div class="profile-header-container">
         <figure class="img-banner-container">
-            <img src="" alt="" class="img-banner">
+            <img src="{% static 'users/img/banner-example.jpg' %}" alt="" class="img-banner">
         </figure>
-        <figure class="img-profile-container">
-            <img src="{% static 'users/img/user-profile-icon.png' %}" alt="" class="img-profile">
-        </figure>
-        <section class="profile-info-container">
-            <article class="profile-info">
-                <h2 class="profile-name">{{ request.user.username }}</h2>
-                <p class="profile-bio">Escreva um pouco sobre você...</p>
-            </article>
-        </section>
-        <section class="profile-btn-container">
-            <button class="btn-profile-follow">Seguir</button>
-            <button class="btn-profile-send-message">Mensagem</button>
-            <button class="btn-profile-edit">Editar Perfil</button>
-        </section>
+        <div class="profile-items-container">
+            <figure class="img-profile-container">
+                <img src="{% static 'users/img/user-profile-icon.png' %}" alt="" class="img-profile">
+            </figure>
+            <section class="profile-info-container">
+                <article class="profile-info">
+                    <h2 class="profile-name">{{ request.user.username }}</h2>
+                    <p class="profile-bio">Escreva um pouco sobre você...</p>
+                </article>
+            </section>
+            <section class="profile-btn-container">
+                <button class="btn" id="btn-profile-follow">Seguir</button>
+                <button class="btn" id="btn-profile-send-message">Mensagem</button>
+                <button class="btn" id="btn-profile-edit">Editar Perfil</button>
+            </section>
+        </div>
     </div>
 </main>
