@@ -2,3 +2,23 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" href="{% static 'users/css/profile-view.css' %}">
 
+<main>
+    <div class="profile-header-container">
+        <figure class="img-banner-container">
+            <img src="" alt="" class="img-banner">
+        </figure>
+        <figure class="img-profile-container">
+            <img src="" alt="" class="img-profile">
+        </figure>
+        <section class="profile-info-container">
+            <article class="profile-info">
+                <h2 class="profile-name">{{ request.user.username }}</h2>
+                <p class="profile-bio">Escreva um pouco sobre você...</p>
+            </article>
+        </section>
+        <section class="profile-btn-container">
+            <button class="btn-profile-follow">Seguir</button>
+            <button class="btn-profile-send-message">Mensagem</button>
+        </section>
+    </div>
+</main>

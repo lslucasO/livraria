@@ -99,6 +99,11 @@ def logout_view(request):
 
 @login_required(login_url='users:login', redirect_field_name='next')
 def profile(request):
-    return render(request, 'users/pages/profile.html')
+    
+    context = {
+        'title': 'Seu Perfil'
+    }
+    
+    return render(request, 'users/pages/profile.html', context)
 
 
