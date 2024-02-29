@@ -58,7 +58,7 @@ def login_create(request):
         raise Http404()
     
     form = LoginForm(request.POST)
-    user_id = request.user.id
+    user = request.user.username
     login_url = reverse('users:login')
     
     # Autenticando o usuario no sistema pelo form de Login
@@ -79,7 +79,7 @@ def login_create(request):
     else:
         messages.error(request, 'Erro ao validar o formulário.')
     
-    return redirect(reverse(f'users:profile', args=(user_id)))
+    return redirect(reverse(f'users:profile', args=(user)))
 
 
 # Função de logout do usuario
